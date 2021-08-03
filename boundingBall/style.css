@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: black;
+}
+.ball {
+    height: 40px;
+    width: 40px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: move 4s ease-in-out infinite;
+    animation-timing-function: ease-in-out;
+-webkit-animation-timing-function: ease-in-out;
+}
+
+
+@keyframes move {
+  0% {
+      top: 10%;
+      left: 0%;
+    }
+    50% {
+        top: calc(100% - 40px);
+        left: calc(90% - 40px);
+    }
+     60% {
+        top: calc(90% - 40px);
+        left: calc(100% - 40px);
+    }
+    90% {
+        top: 0%;
+        left: 10%;
+    }
+    100% {
+        top: 10%;
+        left: 0%;
+    }
+}
